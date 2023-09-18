@@ -37,13 +37,13 @@ public class ExisteOwnerNoExisteTest {
 	public void tearDown() {}
 	
 	@Test
-	public void testNoExisteDueño() throws SQLException {
-		OwnerDAO dueñoDAO = new OwnerDAO();
-		Owner dueño = new Owner();
+	public void testNoExisteOwner() throws SQLException {
+		OwnerDAO ownerDAO = new OwnerDAO();
+		Owner owner = new Owner();
 		
-		dueño = dueñoDAO.obtenerOwner("1-1119");
+		owner = ownerDAO.obtenerOwner("1-1119");
 		
-		assertEquals("El dueño no existe en la base de datos. . .", dueño.getRut(), null );
-		System.out.println("El dueño no existe en la base de datos...");
+		assertEquals("El owner no existe en la base de datos. . .", owner.getRut(), null );
+		System.out.println("El owner no existe en la base de datos...");
 	}
 }
