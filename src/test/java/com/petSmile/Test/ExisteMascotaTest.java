@@ -14,10 +14,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.petSmile.Conexion.Conexion;
-import com.petSmile.DAO.DueñoDAO;
+import com.petSmile.DAO.OwnerDAO;
 import com.petSmile.DAO.MascotaDAO;
 import com.petSmile.DAO.UsuarioDAO;
-import com.petSmile.Model.Dueño;
+import com.petSmile.Model.Owner;
 import com.petSmile.Model.Mascota;
 import com.petSmile.Model.Usuario;
 

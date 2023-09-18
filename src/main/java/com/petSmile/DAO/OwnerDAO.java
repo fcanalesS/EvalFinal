@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.petSmile.Conexion.Conexion;
-import com.petSmile.Model.Dueño;
+import com.petSmile.Model.Owner;
 
-public class DueñoDAO {
+public class OwnerDAO {
 	private Connection connection;
 	private PreparedStatement statement;
 	private boolean estadoOperacion;
 	
-	public boolean insertarDueño ( Dueño owner) throws SQLException {
+	public boolean insertarDueño ( Owner owner) throws SQLException {
 		try {
 			ResultSet resultSet = null;
 			
@@ -50,9 +50,9 @@ public class DueñoDAO {
 		}
 	}
 	
-	public Dueño obtenerDueño (String rut) throws SQLException {
+	public Owner obtenerDueño (String rut) throws SQLException {
 		ResultSet resultSet = null;
-		Dueño owner = new Dueño();
+		Owner owner = new Owner();
 		
 		String sql = null;
 		estadoOperacion = false;
@@ -77,7 +77,7 @@ public class DueñoDAO {
 		return owner;
 	}
 	
-	public List<Dueño> obtenerDueñoTodos () throws SQLException {
+	public List<Owner> obtenerDueñoTodos () throws SQLException {
 		ResultSet resultSet = null;		
 		String sql = null;
 		estadoOperacion = false;
@@ -89,9 +89,9 @@ public class DueñoDAO {
 		
 		resultSet = statement.executeQuery();
 		
-		List<Dueño> lista = new ArrayList<Dueño>();
+		List<Owner> lista = new ArrayList<Owner>();
 		while (resultSet.next()) {
-			Dueño owner = new Dueño();
+			Owner owner = new Owner();
 			owner.setRut(resultSet.getString(1));
 			owner.setNombre(resultSet.getString(2));
 			owner.setApellido(resultSet.getString(3));

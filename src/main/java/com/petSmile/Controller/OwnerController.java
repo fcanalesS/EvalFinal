@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.petSmile.DAO.AgendaDAO;
-import com.petSmile.DAO.DueñoDAO;
+import com.petSmile.DAO.OwnerDAO;
 import com.petSmile.Model.Agenda;
-import com.petSmile.Model.Dueño;
+import com.petSmile.Model.Owner;
 
 /**
  * Servlet implementation class OwnerController
@@ -43,8 +43,8 @@ public class OwnerController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		DueñoDAO dao = new DueñoDAO();
-		Dueño d = new Dueño();
+		OwnerDAO dao = new OwnerDAO();
+		Owner d = new Owner();
 		
 		d.setRut(request.getParameter("rut"));
 		d.setNombre(request.getParameter("nombre"));

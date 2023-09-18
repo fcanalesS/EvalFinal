@@ -14,9 +14,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import com.petSmile.Conexion.Conexion;
-import com.petSmile.DAO.DueñoDAO;
+import com.petSmile.DAO.OwnerDAO;
 import com.petSmile.DAO.UsuarioDAO;
-import com.petSmile.Model.Dueño;
+import com.petSmile.Model.Owner;
 import com.petSmile.Model.Usuario;
 
 public class ExisteDueñoNoExisteTest {
@@ -38,8 +38,8 @@ public class ExisteDueñoNoExisteTest {
 	
 	@Test
 	public void testNoExisteDueño() throws SQLException {
-		DueñoDAO dueñoDAO = new DueñoDAO();
-		Dueño dueño = new Dueño();
+		OwnerDAO dueñoDAO = new OwnerDAO();
+		Owner dueño = new Owner();
 		
 		dueño = dueñoDAO.obtenerDueño("1-1119");
 		

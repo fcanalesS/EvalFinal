@@ -1,6 +1,6 @@
 package com.petSmile.Model;
 
-public class Dueño {
+public class Owner {
 	public String Rut;
 	public String nombre;
 	public String apellido;
@@ -9,9 +9,9 @@ public class Dueño {
 	public String telefono;
 	public String nombreMascota;
 	
-	public Dueño () {}
+	public Owner () {}
 
-	public Dueño(String rut, String nombre, String apellido, String direccion, String correo, String telefono,
+	public Owner(String rut, String nombre, String apellido, String direccion, String correo, String telefono,
 			String nombreMascota) {
 		super();
 		Rut = rut;

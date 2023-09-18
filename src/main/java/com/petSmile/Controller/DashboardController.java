@@ -12,10 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.petSmile.DAO.AgendaDAO;
-import com.petSmile.DAO.DueñoDAO;
+import com.petSmile.DAO.OwnerDAO;
 import com.petSmile.DAO.MascotaDAO;
 import com.petSmile.Model.Agenda;
-import com.petSmile.Model.Dueño;
+import com.petSmile.Model.Owner;
 import com.petSmile.Model.Mascota;
 
 /**
@@ -61,8 +61,8 @@ public class DashboardController extends HttpServlet {
 			RequestDispatcher requestDispatcher = (RequestDispatcher) request.getRequestDispatcher("/views/ingresarOwner.jsp");
 			requestDispatcher.forward(request, response);
 		}else if (opcion.equals("ingresarMascota")) {
-			DueñoDAO ownerDAO = new DueñoDAO();
-			List<Dueño> listaOwner = new ArrayList<Dueño>();
+			OwnerDAO ownerDAO = new OwnerDAO();
+			List<Owner> listaOwner = new ArrayList<Owner>();
 			try {
 				listaOwner = ownerDAO.obtenerDueñoTodos();
 			} catch (SQLException e) {
@@ -76,10 +76,10 @@ public class DashboardController extends HttpServlet {
 			RequestDispatcher requestDispatcher = (RequestDispatcher) request.getRequestDispatcher("/views/ingresarMascota.jsp");
 			requestDispatcher.forward(request, response);
 		}else if (opcion.equals("ingresarAgenda")) {
-			DueñoDAO ownerDAO = new DueñoDAO();
+			OwnerDAO ownerDAO = new OwnerDAO();
 			MascotaDAO mascotaDAO = new MascotaDAO();
 			List<Mascota> listaMascota = new ArrayList<Mascota>();
-			List<Dueño> listaOwner = new ArrayList<Dueño>();
+			List<Owner> listaOwner = new ArrayList<Owner>();
 			try {
 				listaOwner = ownerDAO.obtenerDueñoTodos();
 				listaMascota = mascotaDAO.obtenerMascotaTodos();
