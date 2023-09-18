@@ -25,7 +25,7 @@ public class OwnerDAO {
 			
 			connection.setAutoCommit(false);
 			
-			sql = "INSERT INTO dueño (rut, nombre, apellido, direccion, correo, telefono, nombreMascota) values (?,?,?,?,?,?,?)";
+			sql = "INSERT INTO owner (rut, nombre, apellido, direccion, correo, telefono, nombreMascota) values (?,?,?,?,?,?,?)";
 			statement=connection.prepareStatement(sql);
 			statement.setString(1, owner.getRut());
 			statement.setString(2, owner.getNombre());
@@ -58,7 +58,7 @@ public class OwnerDAO {
 		estadoOperacion = false;
 		connection = obtenerConexion();
 		
-		sql = "SELECT * FROM dueño where Rut = ?";
+		sql = "SELECT * FROM owner where Rut = ?";
 		statement=connection.prepareStatement(sql);
 		statement.setString(1, rut);
 		
@@ -83,7 +83,7 @@ public class OwnerDAO {
 		estadoOperacion = false;
 		connection = obtenerConexion();
 		
-		sql = "SELECT * FROM dueño";
+		sql = "SELECT * FROM owner";
 		statement=connection.prepareStatement(sql);
 		
 		
