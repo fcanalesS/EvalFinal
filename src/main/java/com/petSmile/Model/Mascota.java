@@ -2,7 +2,7 @@ package com.petSmile.Model;
 
 public class Mascota {
 	public int idMascota;
-	public String RutDueño;
+	public String RutOwner;
 	public String tipoMascota;
 	public int edad;
 	public String nombreMascota;
@@ -12,7 +12,7 @@ public class Mascota {
 	public Mascota(int idMascota, String rutDueño, String tipoMascota, int edad, String nombreMascota) {
 		super();
 		this.idMascota = idMascota;
-		RutDueño = rutDueño;
+		RutOwner = rutDueño;
 		this.tipoMascota = tipoMascota;
 		this.edad = edad;
 		this.nombreMascota = nombreMascota;
@@ -27,11 +27,11 @@ public class Mascota {
 	}
 
 	public String getRutOwner() {
-		return RutDueño;
+		return RutOwner;
 	}
 
 	public void setRutOwner(String rutDueño) {
-		RutDueño = rutDueño;
+		RutOwner = rutDueño;
 	}
 
 	public String getTipoMascota() {
@@ -60,7 +60,7 @@ public class Mascota {
 
 	@Override
 	public String toString() {
-		return "Mascota [idMascota=" + idMascota + ", RutDueño=" + RutDueño + ", tipoMascota=" + tipoMascota + ", edad="
+		return "Mascota [idMascota=" + idMascota + ", RutDueño=" + RutOwner + ", tipoMascota=" + tipoMascota + ", edad="
 				+ edad + ", nombreMascota=" + nombreMascota + "]";
 	}
 	
