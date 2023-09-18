@@ -64,7 +64,7 @@ public class DashboardController extends HttpServlet {
 			OwnerDAO ownerDAO = new OwnerDAO();
 			List<Owner> listaOwner = new ArrayList<Owner>();
 			try {
-				listaOwner = ownerDAO.obtenerDueñoTodos();
+				listaOwner = ownerDAO.obtenerOwnerTodos();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -81,7 +81,7 @@ public class DashboardController extends HttpServlet {
 			List<Mascota> listaMascota = new ArrayList<Mascota>();
 			List<Owner> listaOwner = new ArrayList<Owner>();
 			try {
-				listaOwner = ownerDAO.obtenerDueñoTodos();
+				listaOwner = ownerDAO.obtenerOwnerTodos();
 				listaMascota = mascotaDAO.obtenerMascotaTodos();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

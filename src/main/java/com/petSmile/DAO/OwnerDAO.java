@@ -15,7 +15,7 @@ public class OwnerDAO {
 	private PreparedStatement statement;
 	private boolean estadoOperacion;
 	
-	public boolean insertarDueño ( Owner owner) throws SQLException {
+	public boolean insertarOwner ( Owner owner) throws SQLException {
 		try {
 			ResultSet resultSet = null;
 			
@@ -50,7 +50,7 @@ public class OwnerDAO {
 		}
 	}
 	
-	public Owner obtenerDueño (String rut) throws SQLException {
+	public Owner obtenerOwner (String rut) throws SQLException {
 		ResultSet resultSet = null;
 		Owner owner = new Owner();
 		
@@ -77,7 +77,7 @@ public class OwnerDAO {
 		return owner;
 	}
 	
-	public List<Owner> obtenerDueñoTodos () throws SQLException {
+	public List<Owner> obtenerOwnerTodos () throws SQLException {
 		ResultSet resultSet = null;		
 		String sql = null;
 		estadoOperacion = false;

@@ -59,7 +59,7 @@ public class OwnerController extends HttpServlet {
 		boolean estado = false;
 		
 		try {
-			estado = dao.insertarDueño(d);
+			estado = dao.insertarOwner(d);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
