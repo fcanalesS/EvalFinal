@@ -9,10 +9,10 @@ public class Mascota {
 	
 	public Mascota () {}
 
-	public Mascota(int idMascota, String rutDueño, String tipoMascota, int edad, String nombreMascota) {
+	public Mascota(int idMascota, String rutOwner, String tipoMascota, int edad, String nombreMascota) {
 		super();
 		this.idMascota = idMascota;
-		RutOwner = rutDueño;
+		RutOwner = rutOwner;
 		this.tipoMascota = tipoMascota;
 		this.edad = edad;
 		this.nombreMascota = nombreMascota;
@@ -30,8 +30,8 @@ public class Mascota {
 		return RutOwner;
 	}
 
-	public void setRutOwner(String rutDueño) {
-		RutOwner = rutDueño;
+	public void setRutOwner(String rutOwner) {
+		RutOwner = rutOwner;
 	}
 
 	public String getTipoMascota() {
@@ -60,7 +60,7 @@ public class Mascota {
 
 	@Override
 	public String toString() {
-		return "Mascota [idMascota=" + idMascota + ", RutDueño=" + RutOwner + ", tipoMascota=" + tipoMascota + ", edad="
+		return "Mascota [idMascota=" + idMascota + ", rutOwner=" + RutOwner + ", tipoMascota=" + tipoMascota + ", edad="
 				+ edad + ", nombreMascota=" + nombreMascota + "]";
 	}
 	
