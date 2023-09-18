@@ -51,7 +51,7 @@ public class MascotaController extends HttpServlet {
 		System.out.println(request.getParameter("edad"));
 		System.out.println(request.getParameter("nombreMascota"));
 		
-		mascota.setRutDueño(request.getParameter("rut"));
+		mascota.setRutOwner(request.getParameter("rut"));
 		mascota.setTipoMascota(request.getParameter("tipoMascota"));
 		mascota.setEdad(Integer.parseInt(request.getParameter("edad")));
 		mascota.setNombreMascota(request.getParameter("nombreMascota"));

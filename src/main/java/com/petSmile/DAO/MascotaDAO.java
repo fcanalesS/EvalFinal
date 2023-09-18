@@ -31,7 +31,7 @@ public class MascotaDAO {
 			
 			sql = "INSERT INTO mascota (rutDueño, tipoMascota, edad, nombreMascota) values (?,?,?,?)";
 			statement=connection.prepareStatement(sql);
-			statement.setString(1, mascota.getRutDueño());
+			statement.setString(1, mascota.getRutOwner());
 			statement.setString(2, mascota.getTipoMascota());
 			statement.setInt(3, mascota.getEdad());
 			statement.setString(4, mascota.getNombreMascota());
@@ -67,7 +67,7 @@ public class MascotaDAO {
 		while (resultSet.next()) {
 			Mascota mascota = new Mascota();
 			mascota.setIdMascota(resultSet.getInt(1));
-			mascota.setRutDueño(resultSet.getString(2));
+			mascota.setRutOwner(resultSet.getString(2));
 			mascota.setTipoMascota(resultSet.getString(3));
 			mascota.setEdad(resultSet.getInt(4));
 			mascota.setNombreMascota(resultSet.getString(5));
@@ -96,7 +96,7 @@ public class MascotaDAO {
 			if (resultSet.next()) {
 				
 				mascota.setIdMascota(resultSet.getInt(1));
-				mascota.setRutDueño(resultSet.getString(2));
+				mascota.setRutOwner(resultSet.getString(2));
 				mascota.setTipoMascota(resultSet.getString(3));
 				mascota.setEdad(resultSet.getInt(4));
 				mascota.setNombreMascota(resultSet.getString(5));
@@ -130,7 +130,7 @@ public class MascotaDAO {
 		while (resultSet.next()) {
 			Mascota mascota = new Mascota();
 			mascota.setIdMascota(resultSet.getInt(1));
-			mascota.setRutDueño(resultSet.getString(2));
+			mascota.setRutOwner(resultSet.getString(2));
 			mascota.setTipoMascota(resultSet.getString(3));
 			mascota.setEdad(resultSet.getInt(4));
 			mascota.setNombreMascota(resultSet.getString(5));

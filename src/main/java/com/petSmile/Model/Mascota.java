@@ -26,11 +26,11 @@ public class Mascota {
 		this.idMascota = idMascota;
 	}
 
-	public String getRutDueño() {
+	public String getRutOwner() {
 		return RutDueño;
 	}
 
-	public void setRutDueño(String rutDueño) {
+	public void setRutOwner(String rutDueño) {
 		RutDueño = rutDueño;
 	}
 

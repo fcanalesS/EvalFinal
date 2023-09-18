@@ -19,8 +19,8 @@ import com.petSmile.DAO.UsuarioDAO;
 import com.petSmile.Model.Owner;
 import com.petSmile.Model.Usuario;
 
-public class ExisteDueñoTest {
-	public ExisteDueñoTest() {}
+public class ExisteOwnerNoExisteTest {
+	public ExisteOwnerNoExisteTest() {}
 	Connection connection;
 	private static BasicDataSource dataSource = null;
 	
@@ -37,13 +37,13 @@ public class ExisteDueñoTest {
 	public void tearDown() {}
 	
 	@Test
-	public void testExisteDueño() throws SQLException {
+	public void testNoExisteDueño() throws SQLException {
 		OwnerDAO dueñoDAO = new OwnerDAO();
 		Owner dueño = new Owner();
 		
-		dueño = dueñoDAO.obtenerDueño("1-9");
+		dueño = dueñoDAO.obtenerOwner("1-1119");
 		
-		assertEquals("El dueño existe en la base de datos. . .", dueño.getRut(), "1-9" );
-		System.out.println("El dueño existe en la base de datos...");
+		assertEquals("El dueño no existe en la base de datos. . .", dueño.getRut(), null );
+		System.out.println("El dueño no existe en la base de datos...");
 	}
 }
