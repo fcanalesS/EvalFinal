@@ -29,7 +29,7 @@ public class AgendaDAO {
 			connection = obtenerConexion();
 			connection.setAutoCommit(false);
 			
-			sql = "INSERT INTO agenda (idMascota, rutDueño, nombreMascota, hora, fecha) values (?,?,?,?,?)";
+			sql = "INSERT INTO agenda (idMascota, rutOwner, nombreMascota, hora, fecha) values (?,?,?,?,?)";
 			statement=connection.prepareStatement(sql);
 			statement.setInt(1, agenda.getIdMascota());
 			statement.setString(2, agenda.getRutOwner());
