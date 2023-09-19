@@ -15,7 +15,7 @@ public class Conexion {
 			dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 			dataSource.setUsername("root");
 			dataSource.setPassword("felipe123");
-			dataSource.setUrl("jdbc:mysql://localhost:32769/PetSmile");
+			dataSource.setUrl("jdbc:mysql://localhost:32769/clinica");
 			
 			dataSource.setInitialSize(20);
 			dataSource.setMaxIdle(15);
